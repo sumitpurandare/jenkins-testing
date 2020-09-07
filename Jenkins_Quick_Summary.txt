@@ -1,0 +1,79 @@
+===============
+Jenkins 
+===============
+What is Jenkins ?
+Jenkins is a free and open source automation server. It helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery. It is a server-based system that runs in servlet containers such as Apache Tomcat.
+
+Job 
+Job is any runnable task that is controlled by Jenkins.
+job = project 
+
+The jenkins official documentation indicates that the term Job has been replaced by the term Project.
+
+Jobs in Jenkins:
+--> Freestyle Project:
+This is the most common type of project.The build step for  this type of project noraly executes a shell (Linux) or batch (Windows) command.
+
+--> Pipelines Project 
+This type of project used to be called a workflow.These projects are normally written in Jenkins Domain Specific Language(DSL).
+
+--> Multi-Configuration Project
+This is for projects that will be tested on multiple environments, and require different configurations,depending on thos environnments.
+
+--> Folder
+
+--> Multi-branch Pipeleine:
+
+Build: A build is result of single execution of a project.
+Source > branch > commit <---> test | feedback ======================> Build
+      Pull     Change           Integration      Integration pass
+	  
+
+Check SCM
+Clean Checkout
+Build Code
+Perform testing
+Check pass fail
+Provide Feedback
+If pass produce build 
+
+Artifacts & Repositories :
+
+Arifacts are files generated during a build like XML file, JAR file, WAR file, config files
+This refers to immutable files that are generated during a buils or a pipeline run.
+Artifacts are mainly maitained in a repo and can be on Jekins master or in a SCM (Source Control Manager).
+
+Repo hold items that need to be retrieved.These items can include source code, compiled code artifacts 
+
+Build Tools :
+These are the software that actually Performsthe build portion of the pipeleine.
+
+Build tools can include Maven,Ant & shell scripting 
+
+Configuration varies by build tool, but the processes are similar:
+1. Start Jenkins & Install required plugins
+2. Perform global configuration steps.
+3. Create a job/Pipeline that utlizes the build tool.
+4. Update the tools configuration files: POM, XML, .config etc.
+
+Source Code manager :
+- Software used to track changes in code.
+- Changes in code, revisions, are timestamped and include the identity of the person that made the change.
+- Jenkins changelogs are used for changes in builds.
+
+Testting :
+Unit testing :
+--> In this type of test individual compnents classess ,methods, modules ) are tested to ensure that outputs are as expected.
+
+Smoke test :
+--> "Plugins something-in and plug-out and see if we get any smoke"
+--> Does it load ? , Does all menus work? , Does it crash when the save button is clicked ?
+
+Functional Testing :
+Vaerification testing seeks to answer the question : "Did we satisfy the build requirements ?"
+--> Does this feature work or Can a user do this ?
+
+Acceptance Testing :
+--> This is the handoff test of the software of the client.It is normally done by the client to ensure that the software meets their expectations.
+
+

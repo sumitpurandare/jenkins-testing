@@ -1,0 +1,5 @@
+<html>
+<body><p>This Job was successful</p>
+<h1>Please go to Jenkins GUI</h1>
+</body>
+</html>
