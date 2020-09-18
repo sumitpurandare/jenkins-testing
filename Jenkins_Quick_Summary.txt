@@ -76,4 +76,39 @@ Vaerification testing seeks to answer the question : "Did we satisfy the build r
 Acceptance Testing :
 --> This is the handoff test of the software of the client.It is normally done by the client to ensure that the software meets their expectations.
 
+Jenkins API:
 
+Jenkins provides amachine consumable REST style API for programmatically interacting with the Jenkins Server.
+
+"What is REST API?
+Representational state transfer is a software architectural style that defines a set of constraints to be used for creating Web services. Web services that conform to the REST architectural style, called RESTful Web services, provide interoperability between computer systems on the internet.
+
+Installation on CentOs 7 :
+sudo su # this prevents us from having to issue sudo each time.  
+yum install -y wget  
+wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat/jenkins.repo  
+rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key  
+yum install jenkins  java-1.8.0-openjdk-devel git -y  
+systemctl enable jenkins && systemctl restart jenkins  
+
+
+for Windows always check if git is installed :
+
+C:\Program Files\Git\bin\sh.exe
+
+===============================================================
+http://localhost:8082/job/git_testing/10/console --> use this url or try to restart jenkins service > Computer Management > Services & wait 
+
+
+Source Code Management plays an important
+
+- Please Install required plugins for Git or any other SCM integration
+- 
+9555fc9a56af45fda1c9ae4ef12a5eb93e422cbb
+
+localhost will no connect to github SOcketXP or other client we need to install
+
+Steps to connect push based events in github and jenkins job should run 
+
+--> Go to github setting > Developers Setting > Personal Access token > Generate new token 
+--> Copy newly generated token and paste it to Jenkins > Manage Jenkins > Configure System > Github server and include in jenkins server and ADD
